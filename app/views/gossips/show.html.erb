@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title><%= "The Gossip Project" %></title>
+  <script src="script.js"></script>
+</head>
+<body>
+<h1> Bienvenue </h1>
+<p> NTM </p>
+
+<h3> Voici la liste :  </h3>
+<p><%= @gossipfind.title%></p>
+<p><%= @gossipfind.user[:first_name]%></p>
+<p><%= @gossipfind.content%></p>
+<p><%= @gossipfind.create_date%></p>
+<%= link_to "Accéder au pofil de #{@gossipfind.user[:first_name]}", user_path(@user.id), :class =>"btn btn-secondary btn-lg active" %>
+</body>
+</html>
