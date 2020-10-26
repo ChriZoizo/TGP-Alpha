@@ -6,16 +6,37 @@
   <script src="script.js"></script>
 </head>
 <body>
+<br>
 <h1> Profil </h1>
-<p></p>
+<!-- Card -->
+<div class="card testimonial-card">
 
-<h3> Le user  </h3>
-<p><%= @userfind.first_name%></p>
-<p><%= @userfind.last_name%></p>
-<p><%= @userfind.description%></p>
-<p><%= @userfind.email%></p>
-<p><%= @userfind.age%></p>
-<p><%= @userfind.city[:name]%></p>
-<%# <%= link_to "Accéder au pofil de #{@gossipfind.user[:first_name]}", user_path(@user.id), :class =>"btn btn-secondary btn-lg active" %> 
+  <!-- Background color -->
+  <div class="card-up indigo lighten-1"></div>
+<br>
+  <!-- Avatar -->
+  <div class="avatar mx-auto white">
+    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle"
+      alt="woman avatar">
+  </div>
+
+  <!-- Content -->
+  <div class="card-body">
+    <!-- Name -->
+    <h3 class="card-title"><%="#{@userfind.first_name} #{@userfind.last_name}"%></h3>
+    <hr>
+  
+<h6 class="font-weight-bold">Profil: </h6> <p class="text-secondary"><%= @userfind.description%></p>
+<h6 class="font-weight-bold">Email: </h6> <p class="text-secondary"><%= @userfind.email%></p>
+<h6 class="font-weight-bold">Age: </h6> <p class="text-secondary"><%= @userfind.age%></p>
+<h6 class="font-weight-bold">Ville:</h6> <p class="text-secondary"><%= @userfind.city[:name]%></p>
+    <!-- Quotation -->
+    <p>
+    </p>
+    <%= link_to "Revenir à l'accueil", landing_path(:first_name_id), :class => 'btn btn-info'%>
+  </div>
+
+</div>
+<!-- Card -->
 </body>
 </html>
