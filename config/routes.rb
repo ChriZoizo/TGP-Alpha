@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'contact#show'
 
-  get '/welcome/:first_name_id', to: 'welcome#say_hello', as: 'landing'
+  get '/welcome/:first_name', to: 'welcome#say_hello', as: 'landing'
 
   resources :gossips
 
