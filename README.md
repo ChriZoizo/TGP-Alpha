@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This the the Pre alpha release of my school project.
+This website is design for share gossip with friend
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+Unzip the archive in your workplace folder. Open terminal and do 
+```ruby
+bundle install
+```
 
-* System dependencies
 
-* Configuration
+## How to use
 
-* Database creation
+Open terminal and place the path into the app folder.
 
-* Database initialization
+Launch server
+```ruby
+rails serveur
+or
+rails s
+```
 
-* How to run the test suite
+For testing
+```ruby
+rails c
+or
+rails console --sandbox #for test without any DB save when you quit
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+##URLs of website
+http://localhost:3000 pour afficher la page d'accueil par défaut
+http://localhost:3000/team pour afficher le team
+http://localhost:3000/contact pour afficher le contact de l'équipe et en bonus
+http://localhost:3000/welcome/:firstname pour un message personnalisé d'accueil
+http://localhost:3000/:potin pour afficher le détail d'un potin particulier
